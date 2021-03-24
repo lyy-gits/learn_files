@@ -214,13 +214,13 @@ BUG_REPORT_URL="http://tapd.oa.com/tlinux/bugtrace/bugreports/my_view/"
 
 ```shell
 #1.卸载旧版本
-yum remove docker \
-                  docker-client \
-                  docker-client-latest \
-                  docker-common \
-                  docker-latest \
-                  docker-latest-logrotate \
-                  docker-logrotate \
+yum remove docker /
+                  docker-client /
+                  docker-client-latest /
+                  docker-common /
+                  docker-latest /
+                  docker-latest-logrotate /
+                  docker-logrotate /
                   docker-engine
 #2.直接安装docker
 yum install docker-io -y
@@ -771,7 +771,7 @@ docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=
 portainer
 
 ```sh
-docker run -d -p 8080:9000 \
+docker run -d -p 8080:9000 /
 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer
 ```
 
@@ -782,7 +782,7 @@ Rancher
 Docker 图形化界面管理工具！提供一个后台面板供我们操作！
 
 ```sh
-docker run -d -p 8088:9000 \
+docker run -d -p 8088:9000 /
 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer
 ```
 
@@ -842,7 +842,7 @@ rootfs（root file system),在 bootfs 之上。包含的就是典型 Linux 系�
 
 我们可以去下载一个镜像，注意观察下载的日志输出，可以看到是一层一层的在下载
 
-![image-20201218141537072](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218141537072.png)
+![image-20201218141537072](./typora-user-images/image-20201218141537072.png)
 
 思考：为什么Docker镜像要采用这种分层的结构呢？
 
@@ -876,19 +876,19 @@ rootfs（root file system),在 bootfs 之上。包含的就是典型 Linux 系�
 
 该镜像当前已经包含3个镜像层，如下图所示（这只是一个用于演示的很简单的例子）
 
-![image-20201218142455945](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218142455945.png)
+![image-20201218142455945](./typora-user-images/image-20201218142455945.png)
 
 在添加额外的镜像层的同时，镜像始终保持是当前所有镜像的组合，理解这一点非常重要，下图中举了一个简单的例子，每个镜像层包含3个文件，而镜像包含了来自两个镜像层的6个文件
 
-![image-20201218142733896](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218142733896.png)
+![image-20201218142733896](./typora-user-images/image-20201218142733896.png)
 
 上图中的镜像层跟之前图中的略有区别，主要目的是便于展示文件
 
 下图中展示了一个稍微复杂的三层镜像，在外部看来整个镜像只有6个文件，这是因为最上层中的文件7是文件5的一个更新版本
 
-![image-20201218142918368](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218142918368.png)
+![image-20201218142918368](./typora-user-images/image-20201218142918368.png)
 
-![image-20201218143811480](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218143811480.png)
+![image-20201218143811480](./typora-user-images/image-20201218143811480.png)
 
 这种情况下，上层镜像层中的文件覆盖了底层镜像层中的文件。这样就使得文件的更新版本作为一个镜像层添加到镜像当中。
 
@@ -900,7 +900,7 @@ Docker在Windows上仅支持windowsfilter一种存储引擎，该引擎基于NTF
 
 下图展示了与系统显示相同的三层镜像，所有镜像层堆叠并合并，对外提供统一的视图
 
-![image-20201218144811970](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218144811970.png)
+![image-20201218144811970](./typora-user-images/image-20201218144811970.png)
 
 > 特点
 
@@ -910,7 +910,7 @@ Docker镜像都是只读的，当容器启动时，一个新的可写层被加�
 
 
 
-![image-20201218150036602](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218150036602.png)
+![image-20201218150036602](./typora-user-images/image-20201218150036602.png)
 
 如何提交自己的镜像
 
@@ -935,7 +935,7 @@ docker commit -m="提交的描述信息" -a="作者" 容器id  目标镜像名,[
 [root@VM-0-19-centos ~]# docker commit -a='lyy' -m='add webapps app' ee tomcat02:1.0
 ```
 
-![image-20201218151650688](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218151650688.png)
+![image-20201218151650688](./typora-user-images/image-20201218151650688.png)
 
 ```shell
 如果想要保存当前容器的状态，就可以通过commit来提交，获得一个镜像
@@ -958,7 +958,7 @@ MySQL，容器删除    （需求：MySQL数据可以存储在本地）
 
 这既是卷技术，目录的挂载，将容器内的目录，挂载到Linux上面
 
-![image-20201218153821010](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218153821010.png)
+![image-20201218153821010](./typora-user-images/image-20201218153821010.png)
 
 **总结：容器的持久化和同步操作！容器间也是可以数据共享**
 
@@ -974,11 +974,11 @@ MySQL，容器删除    （需求：MySQL数据可以存储在本地）
  #启动后可以通过docker inspect 容器id  查看挂载情况  （双向绑定）
 ```
 
-![image-20201218154724120](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218154724120.png)
+![image-20201218154724120](./typora-user-images/image-20201218154724120.png)
 
 测试文件的同步
 
-![image-20201218154953810](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218154953810.png)
+![image-20201218154953810](./typora-user-images/image-20201218154953810.png)
 
 测试
 
@@ -990,7 +990,7 @@ MySQL，容器删除    （需求：MySQL数据可以存储在本地）
 
 4.容器内的数据依旧是同步的
 
-![image-20201218155729730](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218155729730.png)
+![image-20201218155729730](./typora-user-images/image-20201218155729730.png)
 
 作用：以后修改只需要在本地修改即可，容器内会自动同步
 
@@ -1019,17 +1019,17 @@ MySQL，容器删除    （需求：MySQL数据可以存储在本地）
 #在本地测试创建数据库，查看映射的路径是否OK
 ```
 
-![image-20201218172156949](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218172156949.png)
+![image-20201218172156949](./typora-user-images/image-20201218172156949.png)
 
 查看宿主机和容器内是否同步新创建的数据库，同步成功
 
-![image-20201218172541962](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218172541962.png)
+![image-20201218172541962](./typora-user-images/image-20201218172541962.png)
 
 假设将容器删除，发现挂载到本地的数据卷依旧没有丢失，这就实现了容器数据持久化功能
 
-![image-20201218172927625](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218172927625.png)
+![image-20201218172927625](./typora-user-images/image-20201218172927625.png)
 
-![image-20201218172937656](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218172937656.png)
+![image-20201218172937656](./typora-user-images/image-20201218172937656.png)
 
 ### 具名和匿名挂载
 
@@ -1056,7 +1056,7 @@ local               juming-nginx
 #查看卷
 ```
 
-![image-20201218184346025](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218184346025.png)
+![image-20201218184346025](./typora-user-images/image-20201218184346025.png)
 
 所有的docker容器内的卷，没有指定目录的情况下都是在/var/lib/docker/volumes/xxx/_data
 
@@ -1100,17 +1100,17 @@ CMD /bin/bash
 #这里每个命令，就是镜像的一层
 ```
 
-![image-20201218190756146](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218190756146.png)
+![image-20201218190756146](./typora-user-images/image-20201218190756146.png)
 
 ```shell
 #启动自己创建的容器
 ```
 
-![image-20201218191316594](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218191316594.png)
+![image-20201218191316594](./typora-user-images/image-20201218191316594.png)
 
 这个卷和宿主机一定有一个同步的目录
 
-![image-20201218191720168](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218191720168.png)
+![image-20201218191720168](./typora-user-images/image-20201218191720168.png)
 
 查看卷挂载路径
 
@@ -1118,7 +1118,7 @@ CMD /bin/bash
 [root@VM-0-19-centos ~]# docker inspect e
 ```
 
-![image-20201218191819413](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218191819413.png)
+![image-20201218191819413](./typora-user-images/image-20201218191819413.png)
 
 测试刚才的文件是否同步
 
@@ -1128,31 +1128,31 @@ CMD /bin/bash
 
 > 容器内新建的文件
 
-![image-20201218191850418](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218191850418.png)
+![image-20201218191850418](./typora-user-images/image-20201218191850418.png)
 
 > 查看宿主机是否同步
 
-![image-20201218192017371](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218192017371.png)
+![image-20201218192017371](./typora-user-images/image-20201218192017371.png)
 
 ### 数据卷容器
 
 多个mysql同步数据
 
-![image-20201218192807484](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218192807484.png)
+![image-20201218192807484](./typora-user-images/image-20201218192807484.png)
 
 ```shell
 #启动3个容器，通过自己创建的镜像启动
 ```
 
-![image-20201218193105046](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218193105046.png)
+![image-20201218193105046](./typora-user-images/image-20201218193105046.png)
 
 启动docker02执行挂载操作，在docker01创建文件后，查看docker02是否同步
 
-![image-20201218193519578](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218193519578.png)
+![image-20201218193519578](./typora-user-images/image-20201218193519578.png)
 
-![image-20201218193535420](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218193535420.png)
+![image-20201218193535420](./typora-user-images/image-20201218193535420.png)
 
-![image-20201218194221907](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218194221907.png)
+![image-20201218194221907](./typora-user-images/image-20201218194221907.png)
 
 ```shell
 #测试，删除docker01查看docker02和docker03是否还可以访问这个文件
@@ -1191,9 +1191,9 @@ dockerfile是用来构建docker镜像的文件
 
 官方做法
 
-![image-20201218195845853](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218195845853.png)
+![image-20201218195845853](./typora-user-images/image-20201218195845853.png)
 
-![image-20201218195941139](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218195941139.png)
+![image-20201218195941139](./typora-user-images/image-20201218195941139.png)
 
 很多官方镜像都是基础包，很多功能没有，通常会搭建自己的镜像
 
@@ -1209,7 +1209,7 @@ dockerfile是用来构建docker镜像的文件
 
 4.每一个指令都会创建提交一个新的镜像层并提交
 
-![image-20201218200439003](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201218200439003.png)
+![image-20201218200439003](./typora-user-images/image-20201218200439003.png)
 
 dockerfile是面向开发的，我们以后要发布项目，制作镜像就需要编写dockerfile文件
 
@@ -1246,7 +1246,7 @@ Docker Hub中99%镜像都是从这个基础镜像过来的 FROM scratch，然后
 
 https://github.com/CentOS/sig-cloud-instance-images/blob/b2d195220e1c5b181427c3172829c23ab9cd27eb/docker/Dockerfile
 
-![image-20201221104139260](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221104139260.png)
+![image-20201221104139260](./typora-user-images/image-20201221104139260.png)
 
 > 创建一个自己的centos
 
@@ -1272,15 +1272,15 @@ Successfully built a969b90976a7
 
 对比：原生的centos
 
-![image-20201221110924866](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221110924866.png)
+![image-20201221110924866](./typora-user-images/image-20201221110924866.png)
 
 增加之后的镜像
 
-![image-20201221111022999](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221111022999.png)
+![image-20201221111022999](./typora-user-images/image-20201221111022999.png)
 
 列出本地镜像的变更历史
 
-![image-20201221113313498](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221113313498.png)
+![image-20201221113313498](./typora-user-images/image-20201221113313498.png)
 
 拿到一个镜像，可以研究一下是怎么构建的
 
@@ -1306,7 +1306,7 @@ CMD ["ls","-a"]
 ..  bin		etc  lib   lost+found  mnt    proc  run   srv	tmp  var
 #想追加一个命令 -l  ls -al
 [root@VM-0-19-centos /home/dockerfile]# docker run -it cmdtest -l
-/usr/bin/docker-current: Error response from daemon: oci runtime error: container_linux.go:235: starting container process caused "exec: \"-l\": executable file not found in $PATH".
+/usr/bin/docker-current: Error response from daemon: oci runtime error: container_linux.go:235: starting container process caused "exec: /"-l/": executable file not found in $PATH".
 #cmd的清理下  -l替换了 CMD["ls","-a"]命令  -l不是命令所以报错
 ```
 
@@ -1502,7 +1502,7 @@ ff868a2dd349: Pushing 4.009 MB/15.41 MB
 2653d992f4ef: Pushing 6.028 MB/209.3 MB
 ```
 
-![image-20201221162145109](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221162145109.png)
+![image-20201221162145109](./typora-user-images/image-20201221162145109.png)
 
 提交的时候也是按照镜像的层级来进行提交的
 
@@ -1512,7 +1512,7 @@ ff868a2dd349: Pushing 4.009 MB/15.41 MB
 
 ### 小结
 
-![image-20201221164105329](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221164105329.png)
+![image-20201221164105329](./typora-user-images/image-20201221164105329.png)
 
 ```shell
 #保存镜像到本地
@@ -1529,7 +1529,7 @@ ff868a2dd349: Pushing 4.009 MB/15.41 MB
 
 > 测试
 
-![image-20201221165450321](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221165450321.png)
+![image-20201221165450321](./typora-user-images/image-20201221165450321.png)
 
 三个网络
 
@@ -1537,7 +1537,7 @@ ff868a2dd349: Pushing 4.009 MB/15.41 MB
 #问题，docker是如何处理容器网络访问的？
 ```
 
-![image-20201221165634650](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221165634650.png)
+![image-20201221165634650](./typora-user-images/image-20201221165634650.png)
 
 ```shell
 [root@VM-0-19-centos ~]# docker run -d -P --name tomcat01 tomcat
@@ -1574,11 +1574,11 @@ PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
 
 启动容器后再次测试ip addr 
 
-![image-20201221175415861](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221175415861.png)
+![image-20201221175415861](./typora-user-images/image-20201221175415861.png)
 
 2.再启动一个容器测试，发现又多了一对网卡
 
-![image-20201221190216505](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221190216505.png)
+![image-20201221190216505](./typora-user-images/image-20201221190216505.png)
 
 ```shell
 #我们发现这个容器的网卡，都是一对一对出现的
@@ -1596,7 +1596,7 @@ PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
 
 绘制网络图
 
-![image-20201221191839076](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221191839076.png)
+![image-20201221191839076](./typora-user-images/image-20201221191839076.png)
 
 结论：tomcat01和tomcat02是公用的一个路由器，docker0
 
@@ -1606,13 +1606,13 @@ PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
 
 Docker使用的是Linux的桥接，宿主机中是一个Docker容器的网桥 docker0
 
-![image-20201221193032038](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221193032038.png)
+![image-20201221193032038](./typora-user-images/image-20201221193032038.png)
 
 Docker中的所有的网络接口都是虚拟的，虚拟的转发效率高（内网传递文件）
 
 只要容器删除，对应的一对网桥也随之删除
 
-![image-20201221194339002](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221194339002.png)
+![image-20201221194339002](./typora-user-images/image-20201221194339002.png)
 
 ### --link
 
@@ -1638,7 +1638,7 @@ ping: tomcat03: Name or service not known
 
 探究：inspect
 
-![image-20201221194442832](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221194442832.png)
+![image-20201221194442832](./typora-user-images/image-20201221194442832.png)
 
 tomcat03在本地配置了docker02的配置
 
@@ -1660,7 +1660,7 @@ ff02::2	ip6-allrouters
 
 ```
 
-![image-20201221195038753](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221195038753.png)
+![image-20201221195038753](./typora-user-images/image-20201221195038753.png)
 
 本质探究：--link就是在hosts配置中增加了一个172.17.0.3  tomcat02 53f7559b3d3a
 
@@ -1676,7 +1676,7 @@ docker0问题：不支持容器名连接访问
 
 > 查看所有的docker网络
 
-![image-20201221195431208](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221195431208.png)
+![image-20201221195431208](./typora-user-images/image-20201221195431208.png)
 
 **网络模式**
 
@@ -1714,7 +1714,7 @@ cd5298e57574        none                null                local
 
 自定义网络创建成功
 
-![image-20201221200338692](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221200338692.png)
+![image-20201221200338692](./typora-user-images/image-20201221200338692.png)
 
 通过mynet网络启动容器
 
@@ -1722,7 +1722,7 @@ cd5298e57574        none                null                local
 [root@VM-0-19-centos ~]# docker run -d -P --name tomcat-net-02 --net mynet tomcat
 ```
 
-![image-20201221200502819](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201221200502819.png)
+![image-20201221200502819](./typora-user-images/image-20201221200502819.png)
 
 ```shell
 #再次测试ping连接
@@ -1748,11 +1748,11 @@ mysql  不同集群使用不同网络，保证集群是安全和健康的
 
 ### 网络连通
 
-![image-20201222092050954](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201222092050954.png)
+![image-20201222092050954](./typora-user-images/image-20201222092050954.png)
 
-![image-20201222091803085](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201222091803085.png)
+![image-20201222091803085](./typora-user-images/image-20201222091803085.png)
 
-![image-20201222091819190](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201222091819190.png)
+![image-20201222091819190](./typora-user-images/image-20201222091819190.png)
 
 ```shell
 #测试打通  tomcat01---->mynet
@@ -1766,7 +1766,7 @@ mysql  不同集群使用不同网络，保证集群是安全和健康的
 
 ```
 
-![image-20201222092402351](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201222092402351.png)
+![image-20201222092402351](./typora-user-images/image-20201222092402351.png)
 
 ```shell
 #tomcat01连通ok
@@ -1783,7 +1783,7 @@ ping: tomcat-net-01: Name or service not known
 
 ### 实战：部署Redis集群
 
-![image-20201222092956191](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201222092956191.png)
+![image-20201222092956191](./typora-user-images/image-20201222092956191.png)
 
 创建一个自定义网络
 
@@ -1797,8 +1797,8 @@ ping: tomcat-net-01: Name or service not known
 shell脚本启动redis
 
 ```shell
-for port in $(seq 1 6); \
-do \
+for port in $(seq 1 6); /
+do /
 mkdir -p /mydata/redis/node-${port}/conf
 touch /mydata/redis/node-${port}/conf/redis.conf
 cat << EOF >/mydata/redis/node-${port}/conf/redis.conf
@@ -1814,14 +1814,14 @@ appendonly yes
 EOF
 done
 
- docker run -p 6371:6379 -p 16371:16379 --name redis-1 \
-    -v /mydata/redis/node-1/data:/data1 \
-    -v /mydata/redis/node-1/conf/redis.conf:/etc/redis/redis.conf \
+ docker run -p 6371:6379 -p 16371:16379 --name redis-1 /
+    -v /mydata/redis/node-1/data:/data1 /
+    -v /mydata/redis/node-1/conf/redis.conf:/etc/redis/redis.conf /
     -d --net redis --ip 172.38.0.11 redis:5.0.9-alpine3.11 redis-server /etc/redis/redis.conf
     
- docker run -p 6376:6379 -p 16376:16379 --name redis-6 \
-    -v /mydata/redis/node-6/data:/data1 \
-    -v /mydata/redis/node-6/conf/redis.conf:/etc/redis/redis.conf \
+ docker run -p 6376:6379 -p 16376:16379 --name redis-6 /
+    -v /mydata/redis/node-6/data:/data1 /
+    -v /mydata/redis/node-6/conf/redis.conf:/etc/redis/redis.conf /
     -d --net redis --ip 172.38.0.16 redis:5.0.9-alpine3.11 redis-server /etc/redis/redis.conf
     
 #进入redis
@@ -1902,7 +1902,7 @@ OK
 172.38.0.14:6379> cluster nodes
 ```
 
-![image-20201222095900870](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201222095900870.png)
+![image-20201222095900870](./typora-user-images/image-20201222095900870.png)
 
 使用docker之后，所有技术都会慢慢变得简单起来
 
