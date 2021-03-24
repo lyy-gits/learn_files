@@ -6,7 +6,7 @@
 
 > 1、单机MySQL的年代
 
-![image-20210303104359217](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303104359217.png)
+![image-20210303104359217](./typora-user-images/image-20210303104359217.png)
 
 90年代，一个基本的网站访问量一般不会太大，单个数据库完全足够！
 
@@ -28,7 +28,7 @@
 
 发展过程：优化数据结构和索引—>文件缓存（IO）—>Memcached（当时最热门的技术）
 
-![image-20210303105531134](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303105531134.png)
+![image-20210303105531134](./typora-user-images/image-20210303105531134.png)
 
 > 3、分库分表+水平拆分+MySQL集群
 
@@ -44,7 +44,7 @@
 
 MySQL的集群，很好的满足那个年代的所有需求
 
-![image-20210303110948323](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303110948323.png)
+![image-20210303110948323](./typora-user-images/image-20210303110948323.png)
 
 > 4、如今最近的年代
 
@@ -56,7 +56,7 @@ MySQL有的使用它来存储一些比较大的文件，博客，图片，数据
 
 > 目前一个基本的互联网项目
 
-![image-20210303112902818](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303112902818.png)
+![image-20210303112902818](./typora-user-images/image-20210303112902818.png)
 
 > 为什么要用NoSQL
 
@@ -130,13 +130,13 @@ NoSQL
 
 思考问题：这么多东西难道都是在一个数据库中的吗？
 
-![image-20210303155728250](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303155728250.png)
+![image-20210303155728250](./typora-user-images/image-20210303155728250.png)
 
 大量公司做的都是相同的业务；（竞品协议）
 
 随着这样的竞争，业务是越来越完善，然后对于开发者的要求也是越来越高
 
-![image-20210303155940740](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303155940740.png)
+![image-20210303155940740](./typora-user-images/image-20210303155940740.png)
 
 ```shell
 # 1、商品的基本信息
@@ -176,9 +176,9 @@ NoSQL
 
 解决问题：
 
-![image-20210303161553781](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303161553781.png)
+![image-20210303161553781](./typora-user-images/image-20210303161553781.png)
 
-![image-20210303162102006](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303162102006.png)
+![image-20210303162102006](./typora-user-images/image-20210303162102006.png)
 
 ## NoSQL的四大分类
 
@@ -203,14 +203,14 @@ NoSQL
 
 ### 图形关系数据库
 
-![image-20210303163455606](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303163455606.png)
+![image-20210303163455606](./typora-user-images/image-20210303163455606.png)
 
 + 不是存储的图形，存储的是关系，比如：朋友社交网络，广告推荐
 + **Neo4j**，InfoGrid
 
 > 四者对比
 
-![image-20210303165612872](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303165612872.png)
+![image-20210303165612872](./typora-user-images/image-20210303165612872.png)
 
 # Redis入门
 
@@ -222,7 +222,7 @@ Redis（==Re==mote ==Di==ctionary ==S==erver )，即远程字典服务
 
 是一个开源的使用ANSI [C语言](https://baike.baidu.com/item/C语言)编写、支持网络、可基于内存亦可持久化的日志型、Key-Value[数据库](https://baike.baidu.com/item/数据库/103728)，并提供多种语言的API
 
-![image-20210303173218881](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303173218881.png)
+![image-20210303173218881](./typora-user-images/image-20210303173218881.png)
 
 redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了master-slave(主从)同步
 
@@ -258,7 +258,7 @@ redis会周期性的把更新的数据写入磁盘或者把修改操作写入追
 
 3、下载地址：通过官网下载即可
 
-![image-20210303174412268](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303174412268.png)
+![image-20210303174412268](./typora-user-images/image-20210303174412268.png)
 
 注意：windows在GitHub上下载（停更）
 
@@ -270,23 +270,23 @@ redis会周期性的把更新的数据写入磁盘或者把修改操作写入追
 
 2、下载完毕后得到压缩包，解压（redis十分小，只有5M）
 
-![image-20210303190245090](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303190245090.png)
+![image-20210303190245090](./typora-user-images/image-20210303190245090.png)
 
 3、开启redis，双击运行服务即可
 
 redis-server.exe
 
-![image-20210303190528067](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303190528067.png)
+![image-20210303190528067](./typora-user-images/image-20210303190528067.png)
 
 4、使用redis客户端来连接redis
 
 redis-cli.exe
 
-![image-20210303190939250](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303190939250.png)
+![image-20210303190939250](./typora-user-images/image-20210303190939250.png)
 
 **位置：**http://redis.cn/topics/introduction
 
-![image-20210303191438718](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303191438718.png)
+![image-20210303191438718](./typora-user-images/image-20210303191438718.png)
 
 ## Linux安装
 
@@ -294,11 +294,11 @@ redis-cli.exe
 
 2、解压Redis的安装包！程序一般放在/opt目录下
 
-![image-20210303193029865](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303193029865.png)
+![image-20210303193029865](./typora-user-images/image-20210303193029865.png)
 
 3、进入解压后的文件，可以看到redis的配置文件
 
-![image-20210303194038398](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303194038398.png)
+![image-20210303194038398](./typora-user-images/image-20210303194038398.png)
 
 4、基本的环境安装
 
@@ -312,41 +312,41 @@ make
 make install
 ```
 
-![image-20210303194442476](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303194442476.png)
+![image-20210303194442476](./typora-user-images/image-20210303194442476.png)
 
-![image-20210303194508328](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303194508328.png)
+![image-20210303194508328](./typora-user-images/image-20210303194508328.png)
 
 5、redis的默认安装路径 `usr/local/bin`
 
-![image-20210303194735848](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303194735848.png)
+![image-20210303194735848](./typora-user-images/image-20210303194735848.png)
 
 6、将redis配置文件复制到当前目录下
 
-![image-20210303195007816](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303195007816.png)
+![image-20210303195007816](./typora-user-images/image-20210303195007816.png)
 
 7、redis默认不是后台启动的，修改配置文件
 
-![image-20210303195252703](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303195252703.png)
+![image-20210303195252703](./typora-user-images/image-20210303195252703.png)
 
 8、启动redis服务
 
-![image-20210303195504581](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303195504581.png)
+![image-20210303195504581](./typora-user-images/image-20210303195504581.png)
 
 9、使用redis-cli进行连接测试
 
-![image-20210303195706539](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210303195706539.png)
+![image-20210303195706539](./typora-user-images/image-20210303195706539.png)
 
 10、查看redis进程是否开启
 
-![image-20210304101427331](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304101427331.png)
+![image-20210304101427331](./typora-user-images/image-20210304101427331.png)
 
 11、如何关闭Redis服务？`shutdown`
 
-![image-20210304101607981](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304101607981.png)
+![image-20210304101607981](./typora-user-images/image-20210304101607981.png)
 
 12、再次查看进程是否存在
 
-![image-20210304101654918](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304101654918.png)
+![image-20210304101654918](./typora-user-images/image-20210304101654918.png)
 
 13、后面我们会使用单机多redis启动集群测试
 
@@ -358,7 +358,7 @@ make install
 
 redis-benchmark命令参数
 
-![image-20210304102052974](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304102052974.png)
+![image-20210304102052974](./typora-user-images/image-20210304102052974.png)
 
 测试：
 
@@ -367,21 +367,21 @@ redis-benchmark命令参数
 redis-benchmark -h localhost -p 6379 -c 100 -n 100000
 ```
 
-![image-20210304102507171](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304102507171.png)
+![image-20210304102507171](./typora-user-images/image-20210304102507171.png)
 
 如何查看这些分析？
 
-![image-20210304103138989](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304103138989.png)
+![image-20210304103138989](./typora-user-images/image-20210304103138989.png)
 
-![image-20210304103318350](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304103318350.png)
+![image-20210304103318350](./typora-user-images/image-20210304103318350.png)
 
-![image-20210304103349477](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304103349477.png)
+![image-20210304103349477](./typora-user-images/image-20210304103349477.png)
 
 ## 基础知识
 
 redis默认有16个数据库
 
-![image-20210304103622301](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304103622301.png)
+![image-20210304103622301](./typora-user-images/image-20210304103622301.png)
 
 默认使用的是第0个
 
@@ -394,7 +394,7 @@ OK
 (integer) 0
 ```
 
-![image-20210304103914131](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304103914131.png)
+![image-20210304103914131](./typora-user-images/image-20210304103914131.png)
 
 ```shell
 127.0.0.1:6379[3]> keys *  # 查看数据库所有的key
@@ -501,7 +501,7 @@ string
 
 遇到不会的命令可以在官网查看帮助文档
 
-![image-20210304111230227](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304111230227.png)
+![image-20210304111230227](./typora-user-images/image-20210304111230227.png)
 
 ## String（字符串）
 
@@ -654,7 +654,7 @@ String类似的使用场景：value除了是字符串还可以是数字
 
 基本的数据类型，列表
 
-![image-20210304143508042](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210304143508042.png)
+![image-20210304143508042](./typora-user-images/image-20210304143508042.png)
 
 在redis里面，我们可以把list玩成，栈、队列、阻塞队列
 
@@ -1138,7 +1138,7 @@ hash变更的数据user name age，尤其是用户信息之类的，经常变动
 
 http://redis.cn/commands.html#sorted_set
 
-![image-20210308112051065](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210308112051065.png)
+![image-20210308112051065](./typora-user-images/image-20210308112051065.png)
 
 案例思路：set 排序 存储班级成绩表，工资表排序
 
@@ -1156,7 +1156,7 @@ Redis的Geo在Redis3.2版本就推出了，这个功能可以推算地理位置�
 
 只有六个命令
 
-![image-20210308142823975](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210308142823975.png)
+![image-20210308142823975](./typora-user-images/image-20210308142823975.png)
 
 > #### geoadd
 
@@ -1378,7 +1378,7 @@ bitmaps 位图，数据结构   都是操作二进制位来进行记录，就只
 
 周一：1（打卡）   周二：0（未打卡）
 
-![image-20210308160121353](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210308160121353.png)
+![image-20210308160121353](./typora-user-images/image-20210308160121353.png)
 
 查看某一天是否有打卡
 
@@ -1560,7 +1560,7 @@ unwatch参考文档：http://doc.redisfans.com/transaction/unwatch.html
 
 如果修改失败，获取最新的值就好
 
-![image-20210309112541826](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309112541826.png)
+![image-20210309112541826](./typora-user-images/image-20210309112541826.png)
 
 # redis.conf详解
 
@@ -1568,13 +1568,13 @@ unwatch参考文档：http://doc.redisfans.com/transaction/unwatch.html
 
 > 单位
 
-![image-20210309121936728](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309121936728.png)
+![image-20210309121936728](./typora-user-images/image-20210309121936728.png)
 
 1、配置文件 unit单位 对大小写不敏感
 
 > 包含
 
-![image-20210309122116828](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309122116828.png)
+![image-20210309122116828](./typora-user-images/image-20210309122116828.png)
 
 将多个配置文件配置过来
 
@@ -1690,7 +1690,7 @@ Redis是内存数据库，如果不将内存中的数据库状态保存到磁盘
 
 在主从复制中，rdb就是备用，在从机上面
 
-![image-20210309143324122](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309143324122.png)
+![image-20210309143324122](./typora-user-images/image-20210309143324122.png)
 
 在指定的时间间隔内将内存中的数据集快照写入磁盘，也就是行话讲的Snapshot快照，它恢复时是将快照文件直接读到内存里。
 
@@ -1700,9 +1700,9 @@ Redis会单独创建（fork）一个子进程来进行持久化，会先将数�
 
 ==rdb保存的文件是 dump.rdb== 都是在配置文件中快照模块里进行配置
 
-![image-20210309144322004](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309144322004.png)
+![image-20210309144322004](./typora-user-images/image-20210309144322004.png)
 
-![image-20210309144525356](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309144525356.png)
+![image-20210309144525356](./typora-user-images/image-20210309144525356.png)
 
 > 触发机制
 
@@ -1714,7 +1714,7 @@ Redis会单独创建（fork）一个子进程来进行持久化，会先将数�
 
 备份就自动生成一个dump.rdb文件
 
-![image-20210309152907125](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309152907125.png)
+![image-20210309152907125](./typora-user-images/image-20210309152907125.png)
 
 > 如何恢复rdb文件
 
@@ -1746,7 +1746,7 @@ Redis会单独创建（fork）一个子进程来进行持久化，会先将数�
 
 > 是什么
 
-![image-20210309153921465](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309153921465.png)
+![image-20210309153921465](./typora-user-images/image-20210309153921465.png)
 
 以日志的形式来记录每个写操作，将redis执行过的所有指令记录下来（读操作不记录），只许追加文件但不可以改写文件，redis启动之初会读取该文件重新构建数据，换言之，redis重启的话就根据日志文件的内容将写指令从前到后执行一次以完成数据的恢复工作
 
@@ -1754,23 +1754,23 @@ Redis会单独创建（fork）一个子进程来进行持久化，会先将数�
 
 > append
 
-![image-20210309154341092](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309154341092.png)
+![image-20210309154341092](./typora-user-images/image-20210309154341092.png)
 
 默认是不开启的，需要手动进行配置，仅需将appendonly改为yes就开启了aof
 
-![image-20210309154410221](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309154410221.png)
+![image-20210309154410221](./typora-user-images/image-20210309154410221.png)
 
 重启redis即可以生效
 
-![image-20210309154705351](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309154705351.png)
+![image-20210309154705351](./typora-user-images/image-20210309154705351.png)
 
 如果aof文件有错误，redis启动失败无法连接
 
-![image-20210309155130110](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309155130110.png)
+![image-20210309155130110](./typora-user-images/image-20210309155130110.png)
 
 需要修复aof文件，redis提供了一个工具：`redis-check-aof`
 
-![image-20210309155337112](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309155337112.png)
+![image-20210309155337112](./typora-user-images/image-20210309155337112.png)
 
 如果文件正常，重启直接恢复  ==注意：这里只是将被破坏的key直接清理掉了==
 
@@ -1778,7 +1778,7 @@ Redis会单独创建（fork）一个子进程来进行持久化，会先将数�
 
 aof默认就是文件的无限追加，文件会越来越大
 
-![image-20210309160257450](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309160257450.png)
+![image-20210309160257450](./typora-user-images/image-20210309160257450.png)
 
 如果aof文件大于64m，太大了，会fork一个新的进程来将文件进行重写
 
@@ -1856,15 +1856,15 @@ Redis 客户端可以订阅任意数量的频道。
 
 第一个：消息发送者；第二个：频道；第三个：消息订阅者
 
-![image-20210309162231834](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309162231834.png)
+![image-20210309162231834](./typora-user-images/image-20210309162231834.png)
 
 下图展示了频道 channel1 ， 以及订阅这个频道的三个客户端 —— client2 、 client5 和 client1 之间的关系：
 
-![image-20210309162705019](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309162705019.png)
+![image-20210309162705019](./typora-user-images/image-20210309162705019.png)
 
 当有新消息通过 PUBLISH 命令发送给频道 channel1 时， 这个消息就会被发送给订阅它的三个客户端：
 
-![image-20210309162727098](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309162727098.png)
+![image-20210309162727098](./typora-user-images/image-20210309162727098.png)
 
 > 命令
 
@@ -1966,7 +1966,7 @@ Pub/Sub从字面上理解就是发布( Publish )与订阅(Subscribe )，在Redis
 
 对于这种场景，我们可以使用如下这种架构
 
-![image-20210309165204190](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309165204190.png)
+![image-20210309165204190](./typora-user-images/image-20210309165204190.png)
 
 主从复制，读写分离，80%的情况下都是在进行读操作，减缓服务器的压力，架构中经常使用！ 一主二从
 
@@ -1998,23 +1998,23 @@ repl_backlog_histlen:0
 
 1、端口号
 
-![image-20210309172106533](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309172106533.png)
+![image-20210309172106533](./typora-user-images/image-20210309172106533.png)
 
 2、pid名字
 
-![image-20210309172045436](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309172045436.png)
+![image-20210309172045436](./typora-user-images/image-20210309172045436.png)
 
 3、log文件名字
 
-![image-20210309172038764](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309172038764.png)
+![image-20210309172038764](./typora-user-images/image-20210309172038764.png)
 
 4、dump.rdb名字
 
-![image-20210309172021913](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309172021913.png)
+![image-20210309172021913](./typora-user-images/image-20210309172021913.png)
 
 修改完毕之后启动三个redis，通过进程信息查看
 
-![image-20210309172250548](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309172250548.png)
+![image-20210309172250548](./typora-user-images/image-20210309172250548.png)
 
 ## 一主二从
 
@@ -2066,13 +2066,13 @@ repl_backlog_histlen:28
 
 如果两个都配置完了，就是有两个从机的
 
-![image-20210309173026822](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309173026822.png)
+![image-20210309173026822](./typora-user-images/image-20210309173026822.png)
 
 真实的主从配置应该在配置文件中配置，这样的话是永久的，这里使用的是命令，是暂时的
 
 配置文件中配置主从（在replication模块中）
 
-![image-20210309173621783](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309173621783.png)
+![image-20210309173621783](./typora-user-images/image-20210309173621783.png)
 
 > 细节了解
 
@@ -2080,11 +2080,11 @@ repl_backlog_histlen:28
 
 主机写：
 
-![image-20210309173850545](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309173850545.png)
+![image-20210309173850545](./typora-user-images/image-20210309173850545.png)
 
 从节点读取：
 
-![image-20210309173909981](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309173909981.png)
+![image-20210309173909981](./typora-user-images/image-20210309173909981.png)
 
 测试：主机断开连接，从机依旧连接到主机的，但是没有写操作，这个时候，主机如果回来了，从机依旧可以直接获取到主机写的信息
 
@@ -2106,7 +2106,7 @@ Master接到命令，启动后台的存盘进程，同时收集所有接收到�
 
 上一个M链接下一个S
 
-![image-20210309185707205](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309185707205.png)
+![image-20210309185707205](./typora-user-images/image-20210309185707205.png)
 
 这时候也可以完成主从复制
 
@@ -2128,7 +2128,7 @@ Master接到命令，启动后台的存盘进程，同时收集所有接收到�
 
 哨兵模式是一种特殊的模式，首先Redis提供了哨兵的命令，哨兵是一个独立的进程，作为进程，它会独立运行。其原理是**哨兵通过发送命令，等待Redis服务器响应，从而监控运行的多个Redis实例**。
 
-![image-20210309190707841](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309190707841.png)
+![image-20210309190707841](./typora-user-images/image-20210309190707841.png)
 
 这里的哨兵有两个作用
 
@@ -2137,7 +2137,7 @@ Master接到命令，启动后台的存盘进程，同时收集所有接收到�
 
 然而一个哨兵进程对Redis服务器进行监控，可能会出现问题，为此，我们可以使用多个哨兵进行监控。各个哨兵之间还会进行监控，这样就形成了多哨兵模式。
 
-![image-20210309190935508](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309190935508.png)
+![image-20210309190935508](./typora-user-images/image-20210309190935508.png)
 
 假设主服务器宕机，哨兵1先检测到这个结果，系统并不会马上进行failover（重新选举）过程，仅仅是哨兵1主观的认为主服务器不可用，这个现象成为**主观下线**。当后面的哨兵也检测到主服务器不可用，并且数量达到一定值时，那么哨兵之间就会进行一次投票，投票的结果由一个哨兵发起，进行failover[故障转移]操作。切换成功后，就会通过发布订阅模式，让各个哨兵把自己监控的从服务器实现切换主机，这个过程称为**客观下线**。
 
@@ -2166,7 +2166,7 @@ redis-sentinel lconfig/sentinel.conf 	# 启动
                 _._                                                  
            _.-``__ ''-._                                             
       _.-``    `.  `_.  ''-._           Redis 6.2.1 (00000000/0) 64 bit
-  .-`` .-```.  ```\/    _.,_ ''-._                                   
+  .-`` .-```.  ```//    _.,_ ''-._                                   
  (    '      ,       .-`  | `,    )     Running in sentinel mode
  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 26379
  |    `-._   `._    /     _.-'    |     PID: 22536
@@ -2190,9 +2190,9 @@ redis-sentinel lconfig/sentinel.conf 	# 启动
 
 如果master节点断开了，这个时候就会从从机中随机选择一个服务器（这里面有一个算法）
 
-![image-20210309192035885](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309192035885.png)
+![image-20210309192035885](./typora-user-images/image-20210309192035885.png)
 
-![image-20210309192113868](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309192113868.png)
+![image-20210309192113868](./typora-user-images/image-20210309192113868.png)
 
 如果主机此时回来了，只能归到新的master下，当做slave，这就是哨兵模式的规则
 
@@ -2284,7 +2284,7 @@ Redis缓存的使用，极大的提升了应用程序的性能和效率，特别
 
 另外的一些典型问题就是，缓存穿透、缓存雪崩和缓存击穿。目前，业界也都有比较流行的解决方案。
 
-![image-20210309194654556](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309194654556.png)
+![image-20210309194654556](./typora-user-images/image-20210309194654556.png)
 
 ## 缓存穿透（查不到）
 
@@ -2298,7 +2298,7 @@ Redis缓存的使用，极大的提升了应用程序的性能和效率，特别
 
 布隆过滤器是一种数据结构，对所有可能查询的参数以hash形式存储，在控制层先进行校验，不符合则丢弃，从而避免了对底层存储系统的查询压力;
 
-![image-20210309194859043](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309194859043.png)
+![image-20210309194859043](./typora-user-images/image-20210309194859043.png)
 
 优点：
 
@@ -2314,7 +2314,7 @@ Redis缓存的使用，极大的提升了应用程序的性能和效率，特别
 
 当存储层不命中后，即使返回的空对象也将其缓存起来，同时会设置一个过期时间，之后再访问这个数据将会从缓存中获取，保护了后端数据源;
 
-![image-20210309195034610](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210309195034610.png)
+![image-20210309195034610](./typora-user-images/image-20210309195034610.png)
 
 但是这种方法会存在两个问题:
 
@@ -2340,7 +2340,7 @@ Redis缓存的使用，极大的提升了应用程序的性能和效率，特别
 
 分布式锁∶使用分布式锁，保证对于每个key同时只有一个线程去查询后端服务，其他线程没有获得分布式锁的权限，因此只需要等待即可。这种方式将高并发的压力转移到了分布式锁，因此对分布式锁的考验很大。
 
-![image-20210310101132698](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210310101132698.png)
+![image-20210310101132698](./typora-user-images/image-20210310101132698.png)
 
 缓存中没有数据，第1个进入的线程，获取锁并从数据库去取数据，没释放锁之前，其他并行进入的线程会等待100ms，再重新去缓存取数据。这样就防止都去数据库重复取数据，重复往缓存中更新数据情况出现。
 
@@ -2356,7 +2356,7 @@ Redis缓存的使用，极大的提升了应用程序的性能和效率，特别
 
 产生雪崩的原因之一，比如在写本文的时候，马上就要到双十二零点，很快就会迎来一波抢购，这波商品时间比较集中的放入了缓存，假设缓存一个小时。那么到了凌晨一点钟的时候，这批商品的缓存就都过期了。而对这批商品的访问查询，都落到了数据库上，对于数据库而言，就会产生周期性的压力波峰。于是所有的请求都会达到存储层，存储层的调用量会暴增，造成存储层也会挂掉的情况。
 
-![image-20210310101525757](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210310101525757.png)
+![image-20210310101525757](./typora-user-images/image-20210310101525757.png)
 
 其实集中过期，倒不是非常致命，比较致命的缓存雪崩，是缓存服务器某个节点宕机或断网。因为自然形成的缓存雪崩，一定是在某个时间段集中创建缓存，这个时候，数据库也是可以顶住压力的。无非就是对数据库产生周期性的压力而已。而缓存服务节点的宕机，对数据库服务器造成的压力是不可预知的，很有可能瞬间就把数据库压垮。
 

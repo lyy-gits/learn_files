@@ -186,7 +186,7 @@ pause是pod的根容器，pod中所有的container共享pod的网络栈和挂载
 
 ## 核心组件
 
-![image-20201224112951682](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201224112951682.png)
+![image-20201224112951682](./typora-user-images/image-20201224112951682.png)
 
 ### 1、**主控（master）节点**【管理】
 
@@ -229,7 +229,7 @@ pause是pod的根容器，pod中所有的container共享pod的网络栈和挂载
 
 #### **配置存储中心-->etcd服务**（数据库）
 
-![image-20210203193402294](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210203193402294.png)
+![image-20210203193402294](./typora-user-images/image-20210203193402294.png)
 
 ```shell
 #存储系统，用于保存集群相关的数据
@@ -297,17 +297,17 @@ master派到node节点代表，管理本机容器
 
 ## Kubernetes网络图
 
-![image-20201224104507494](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201224104507494.png)
+![image-20201224104507494](./typora-user-images/image-20201224104507494.png)
 
 ## Kubernetes逻辑架构图
 
-![image-20210203191721722](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210203191721722.png)
+![image-20210203191721722](./typora-user-images/image-20210203191721722.png)
 
 https://blog.csdn.net/fanjianhai
 
 # 第二章：部署K8S集群
 
-![image-20201224114927368](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201224114927368.png)
+![image-20201224114927368](./typora-user-images/image-20201224114927368.png)
 
 ## 常见的K8S安装部署方式：
 
@@ -315,7 +315,7 @@ https://blog.csdn.net/fanjianhai
 
 官方文档：https://kubernetes.io/docs/tutorials/hello-minikube/
 
-![image-20201224142522034](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201224142522034.png)
+![image-20201224142522034](./typora-user-images/image-20201224142522034.png)
 
 **二进制安装部署（生产首选，新手推荐）**
 
@@ -459,15 +459,15 @@ yum install -y kubelet-1.18.0 kubeadm-1.18.0 kubectl-1.18.0
 kubeadm init --apiserver-advertise-address=10.0.0.48 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.18.0 --service-cidr=10.96.0.0/12  --pod-network-cidr=10.244.0.0/16
 
 
---apiserver-advertise-address=10.0.0.48 \    #本地ip
---image-repository registry.aliyuncs.com/google_containers \  #阿里云镜像
---kubernetes-version v1.18.0 \   #版本
---service-cidr=10.96.0.0/12 \	#网络
+--apiserver-advertise-address=10.0.0.48 /    #本地ip
+--image-repository registry.aliyuncs.com/google_containers /  #阿里云镜像
+--kubernetes-version v1.18.0 /   #版本
+--service-cidr=10.96.0.0/12 /	#网络
 --pod-network-cidr=10.244.0.0/16
 #当出现下面的情况表示Kubernetes镜像已经安装成功
 ```
 
-![image-20201224193302162](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201224193302162.png)
+![image-20201224193302162](./typora-user-images/image-20201224193302162.png)
 
 根据提示执行
 
@@ -480,7 +480,7 @@ mkdir -p $HOME/.kube
 [root@master ~]# kubectl get nodes
 ```
 
-![image-20201224193457172](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201224193457172.png)
+![image-20201224193457172](./typora-user-images/image-20201224193457172.png)
 
 下面我们还需要在Node节点执行其它的命令，将node1加入到我们的master节点上
 
@@ -494,7 +494,7 @@ mkdir -p $HOME/.kube
 
 ```shell
 #记得在node节点执行
-kubeadm join 10.0.0.48:6443 --token 7qwnut.eylud0kpvpgknfw4 \
+kubeadm join 10.0.0.48:6443 --token 7qwnut.eylud0kpvpgknfw4 /
     --discovery-token-ca-cert-hash sha256:a5d7986def22eb41466aa7b9a0fef7df13adfd770b9e60d6990a19dcd284e62c
 ```
 
@@ -504,7 +504,7 @@ kubeadm join 10.0.0.48:6443 --token 7qwnut.eylud0kpvpgknfw4 \
 [root@master ~]# kubectl get nodes
 ```
 
-![image-20201224194237402](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201224194237402.png)
+![image-20201224194237402](./typora-user-images/image-20201224194237402.png)
 
 ### 6、部署CNI网络插件
 
@@ -527,11 +527,11 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 kubectl get pods -n kube-system
 ```
 
-![image-20201224195250486](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201224195250486.png)
+![image-20201224195250486](./typora-user-images/image-20201224195250486.png)
 
 现在查看node状态，Ready
 
-![image-20201225111529485](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225111529485.png)
+![image-20201225111529485](./typora-user-images/image-20201225111529485.png)
 
 ### 7、测试Kubernetes集群
 
@@ -546,7 +546,7 @@ k8s是容器化技术，可以联网去下载镜像，用容器的方式进行�
 [root@master ~]# kubectl get pod
 ```
 
-![image-20201225112321550](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225112321550.png)
+![image-20201225112321550](./typora-user-images/image-20201225112321550.png)
 
 下面我们就需要将端口暴露出去，让其能够被外界访问
 
@@ -557,17 +557,17 @@ k8s是容器化技术，可以联网去下载镜像，用容器的方式进行�
 [root@master ~]# kubectl get pod,svc
 ```
 
-![image-20201225112634803](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225112634803.png)
+![image-20201225112634803](./typora-user-images/image-20201225112634803.png)
 
 浏览器访问Node：port   成功访问到nginx欢迎页
 
 http://159.75.8.52:31505/
 
-![image-20201225114401857](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225114401857.png)
+![image-20201225114401857](./typora-user-images/image-20201225114401857.png)
 
 到此为止，我们就搭建了一个单master的k8s集群
 
-![image-20201225114512828](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225114512828.png)
+![image-20201225114512828](./typora-user-images/image-20201225114512828.png)
 
 ## 二进制部署方式
 
@@ -655,7 +655,7 @@ EOF
 
 提到证书，我们想到的就是下面这种情况
 
-![image-20201225142720521](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225142720521.png)
+![image-20201225142720521](./typora-user-images/image-20201225142720521.png)
 
 这个https证书，其实就是服务器颁发给网站的，代表这是一个安全可信任的网站。
 
@@ -665,7 +665,7 @@ EOF
 
 **证书**
 
-![image-20201225143030878](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225143030878.png)
+![image-20201225143030878](./typora-user-images/image-20201225143030878.png)
 
 如果我们使用二进制的方式，那么就需要自己手动签发证书。
 
@@ -673,7 +673,7 @@ EOF
 
 自签证书：我们可以想象成在一家公司上班，然后会颁发一个门禁卡，同时一般门禁卡有两种，一个是内部员工的门禁卡，和外部访客门禁卡。这两种门禁卡的权限可能不同，员工的门禁卡可以进入公司的任何地方，而访客的门禁卡是受限的，这个门禁卡其实就是自签证书
 
-![image-20201225143328289](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225143328289.png)
+![image-20201225143328289](./typora-user-images/image-20201225143328289.png)
 
 #### 1）创建配置文件
 
@@ -786,7 +786,7 @@ chmod +x /usr/local/bin/cfssl /usr/local/bin/cfssljson /usr/local/bin/cfssl-cert
 
 显示生成成功
 
-![image-20201225171142899](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225171142899.png)
+![image-20201225171142899](./typora-user-images/image-20201225171142899.png)
 
 查看server开头的都是证书文件
 
@@ -794,11 +794,11 @@ chmod +x /usr/local/bin/cfssl /usr/local/bin/cfssljson /usr/local/bin/cfssl-cert
 [root@master ~/k8s/etcd-cert]# ls
 ```
 
-![image-20201225171233328](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225171233328.png)
+![image-20201225171233328](./typora-user-images/image-20201225171233328.png)
 
 最终生成证书的文件
 
-![image-20201225171349155](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225171349155.png)
+![image-20201225171349155](./typora-user-images/image-20201225171349155.png)
 
 ### 4、部署etcd集群
 
@@ -817,7 +817,7 @@ chmod +x /usr/local/bin/cfssl /usr/local/bin/cfssljson /usr/local/bin/cfssl-cert
 [root@master ~]# cd etcd-v3.4.9-linux-amd64
 ```
 
-![image-20201225184317885](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201225184317885.png)
+![image-20201225184317885](./typora-user-images/image-20201225184317885.png)
 
 由于etcd相关配置文件默认在/opt/etcd 下
 
@@ -874,21 +874,21 @@ Wants=network-online.target
 [Service]
 Type=notify
 EnvironmentFile=/opt/etcd/cfg/etcd
-ExecStart=/opt/etcd/bin/etcd \
---name=${ETCD_NAME} \
---data-dir=${ETCD_DATA_DIR} \
---listen-peer-urls=${ETCD_LISTEN_PEER_URLS} \
---listen-client-urls=${ETCD_LISTEN_CLIENT_URLS},http://127.0.0.1:2379 \
---advertise-client-urls=${ETCD_ADVERTISE_CLIENT_URLS} \
---initial-advertise-peer-urls=${ETCD_INITIAL_ADVERTISE_PEER_URLS} \
---initial-cluster=${ETCD_INITIAL_CLUSTER} \
---initial-cluster-token=${ETCD_INITIAL_CLUSTER_TOKEN} \
---initial-cluster-state=new \
---cert-file=/opt/etcd/ssl/server.pem \
---key-file=/opt/etcd/ssl/server-key.pem \
---peer-cert-file=/opt/etcd/ssl/server.pem \
---peer-key-file=/opt/etcd/ssl/server-key.pem \
---trusted-ca-file=/opt/etcd/ssl/ca.pem \
+ExecStart=/opt/etcd/bin/etcd /
+--name=${ETCD_NAME} /
+--data-dir=${ETCD_DATA_DIR} /
+--listen-peer-urls=${ETCD_LISTEN_PEER_URLS} /
+--listen-client-urls=${ETCD_LISTEN_CLIENT_URLS},http://127.0.0.1:2379 /
+--advertise-client-urls=${ETCD_ADVERTISE_CLIENT_URLS} /
+--initial-advertise-peer-urls=${ETCD_INITIAL_ADVERTISE_PEER_URLS} /
+--initial-cluster=${ETCD_INITIAL_CLUSTER} /
+--initial-cluster-token=${ETCD_INITIAL_CLUSTER_TOKEN} /
+--initial-cluster-state=new /
+--cert-file=/opt/etcd/ssl/server.pem /
+--key-file=/opt/etcd/ssl/server-key.pem /
+--peer-cert-file=/opt/etcd/ssl/server.pem /
+--peer-key-file=/opt/etcd/ssl/server-key.pem /
+--trusted-ca-file=/opt/etcd/ssl/ca.pem /
 --peer-trusted-ca-file=/opt/etcd/ssl/ca.pem
 Restart=on-failure
 LimitNOFILE=65536
@@ -937,7 +937,7 @@ ETCD_INITIAL_CLUSTER_STATE="new"
 
 查看是否启动（对应端口2379 2380）
 
-![image-20201228111626099](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20201228111626099.png)
+![image-20201228111626099](./typora-user-images/image-20201228111626099.png)
 
 ### 5、部署master组件
 
