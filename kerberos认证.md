@@ -4,7 +4,7 @@
 
 账号密码
 
-![image-20210708093149185](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708093149185.png)
+![image-20210708093149185](./typora-user-images/image-20210708093149185.png)
 
 > 我的密码在哪里
 
@@ -15,7 +15,7 @@
 
 `所以SAM文件千万不要被别人拿走`
 
-![image-20210708093351004](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708093351004.png)
+![image-20210708093351004](./typora-user-images/image-20210708093351004.png)
 
 ### NTLM（NT LAN Manager） Hash
 
@@ -27,7 +27,7 @@
 
 admin => 209c6174da490caeb422f3fa5a7ae634  (32位)
 
-![image-20210708095320745](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708095320745.png)
+![image-20210708095320745](./typora-user-images/image-20210708095320745.png)
 
 ```sql
 admin -> hex(16进制编码) = 61646d696e
@@ -45,7 +45,7 @@ admin => 209c6174da490caeb422f3fa5a7ae634
 
 + LSASS用于微软Windows系统的安全机制。它用于本地安全和登陆策略。
 
-  ![image-20210708095919165](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708095919165.png)
+  ![image-20210708095919165](./typora-user-images/image-20210708095919165.png)
 
 ## Windows 网络认证
 
@@ -67,7 +67,7 @@ admin => 209c6174da490caeb422f3fa5a7ae634
 
   客户端主要在这一步向服务器确认协议的版本，是v1还是v2
 
-![image-20210708110130179](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708110130179.png)
+![image-20210708110130179](./typora-user-images/image-20210708110130179.png)
 
 + 第二步质询
 
@@ -83,7 +83,7 @@ admin => 209c6174da490caeb422f3fa5a7ae634
 
 这一步其实就上面质询过程中的第四点
 
-![image-20210708112651127](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708112651127.png)
+![image-20210708112651127](./typora-user-images/image-20210708112651127.png)
 
 #### NTLM v2协议
 
@@ -120,7 +120,7 @@ lResponder 、smbexec
 
 要完成一个NTLM认证，第一步需要客户端将自己要参与认证的用户名发送至服务器端，等待服务器端给出的challenge...
 
-![image-20210708150805302](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708150805302.png)
+![image-20210708150805302](./typora-user-images/image-20210708150805302.png)
 
 其实哈希传递就是使用用户名对应的NTLM Hash将服务器给出的Chanllenge加密，生成一个Response，来完成认证
 
@@ -128,7 +128,7 @@ lResponder 、smbexec
 
 + smbmap
 
-  ![image-20210708151429917](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708151429917.png)
+  ![image-20210708151429917](./typora-user-images/image-20210708151429917.png)
 
 + CrackMapExec
 
@@ -156,7 +156,7 @@ kerberos是一种网络认证协议，其设计目标是通过密钥系统为客
 
 ### 域认证所参与的角色（三只狗头）
 
-![image-20210708191201760](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708191201760.png)
+![image-20210708191201760](./typora-user-images/image-20210708191201760.png)
 
 + Client
 
@@ -170,7 +170,7 @@ kerberos是一种网络认证协议，其设计目标是通过密钥系统为客
   - Authentication Service（AS）：为client生成TGT的服务
   - Ticket Granting Service（TGS）：为client生成某个服务的ticket
 
-![image-20210708191506177](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708191506177.png)
+![image-20210708191506177](./typora-user-images/image-20210708191506177.png)
 
 PS：从物理层面看，AD与KDC均为域控制器（Domain Controller）
 
@@ -182,21 +182,21 @@ PS：从物理层面看，AD与KDC均为域控制器（Domain Controller）
 
 #### Session Key 与 Ticket Granting Ticket — 第一步
 
-![image-20210708192611767](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708192611767.png)
+![image-20210708192611767](./typora-user-images/image-20210708192611767.png)
 
-![image-20210708192838501](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708192838501.png)
+![image-20210708192838501](./typora-user-images/image-20210708192838501.png)
 
-![image-20210708193109450](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708193109450.png)
+![image-20210708193109450](./typora-user-images/image-20210708193109450.png)
 
 #### Session Key 与 Ticket 第二步
 
-![image-20210708193513374](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708193513374.png)
+![image-20210708193513374](./typora-user-images/image-20210708193513374.png)
 
-![image-20210708193951381](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708193951381.png)
+![image-20210708193951381](./typora-user-images/image-20210708193951381.png)
 
 #### Server Session Key 与 Ticket — 第三步
 
-![image-20210708194113697](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210708194113697.png)
+![image-20210708194113697](./typora-user-images/image-20210708194113697.png)
 
 ## 白银票据（Silver Tickets）
 
@@ -227,16 +227,16 @@ kerberos::purge   #清除票据
 
 Mimikatz: C:\files>mimikatz.exe "privilege::debug""sekurlsa::.logonpasswords" "exit" > log.txt
 
-![image-20210709101344230](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210709101344230.png)
+![image-20210709101344230](./typora-user-images/image-20210709101344230.png)
 
 2. 伪造票据： mimikatz  “kerberos::golden /domain:<域名> /sid:<域SID> /target:<目标服务器主机名> .域名 /service:<服务类型> /rc4:<NTLM Hash> /user:<用户名> /ptt” exit
-3. ![image-20210711155813944](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210711155813944.png)
+3. ![image-20210711155813944](./typora-user-images/image-20210711155813944.png)
 
 #### 白银票据 — 默认服务【服务类型】
 
 由于白银票据需要目标服务器的Hash，所以没办法生成对应域内所有服务器的票据，也不能通过TGT申请。因此只能针对服务器上的某些服务去伪造，伪造的服务类型列表如下：
 
-![image-20210709102501973](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210709102501973.png)
+![image-20210709102501973](./typora-user-images/image-20210709102501973.png)
 
 > 通过伪造白银票据获得Server文件共享的权限
 
@@ -256,17 +256,17 @@ Mimikatz: C:\files>mimikatz.exe "privilege::debug""sekurlsa::.logonpasswords" "e
 
 这里的krbtgt hash就是之前讲的KDC Hash
 
-![image-20210709103449620](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210709103449620.png)
+![image-20210709103449620](./typora-user-images/image-20210709103449620.png)
 
 黄金票据（Golden Tickets） — MSF kiwi
 
-![image-20210709110301878](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210709110301878.png)
+![image-20210709110301878](./typora-user-images/image-20210709110301878.png)
 
-![image-20210709110309190](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210709110309190.png)
+![image-20210709110309190](./typora-user-images/image-20210709110309190.png)
 
 创建黄金票据
 
-![image-20210709110400307](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210709110400307.png)
+![image-20210709110400307](./typora-user-images/image-20210709110400307.png)
 
 ```sql
 golden_ticket_create -d 域名 -k krgtbt的hash -s 域的SID -u 任意用户名 -t 保存路径
@@ -274,13 +274,13 @@ golden_ticket_create -d 域名 -k krgtbt的hash -s 域的SID -u 任意用户名 
 
 导入黄金票据
 
-![image-20210709110603024](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210709110603024.png)
+![image-20210709110603024](./typora-user-images/image-20210709110603024.png)
 
 创建进程
 
 调用wmic
 
-![image-20210709111129251](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210709111129251.png)
+![image-20210709111129251](./typora-user-images/image-20210709111129251.png)
 
 #### 黄金票据 — 伪造
 
@@ -344,9 +344,9 @@ SID的表现形式：
 + Powershell—Invoke—TokenManipulation.ps1
 + Cobalt Strike—steal_token
 
-![image-20210710195734028](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210710195734028.png)
+![image-20210710195734028](./typora-user-images/image-20210710195734028.png)
 
-![image-20210710195915548](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210710195915548.png)
+![image-20210710195915548](./typora-user-images/image-20210710195915548.png)
 
 ### Windows Access Token令牌假冒防御
 
