@@ -9,7 +9,7 @@
 tcpdump -i eth0 -s 0 -w 1.cap
 ```
 
-![image-20210712152911285](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210712152911285.png)
+![image-20210712152911285](./typora-user-images/image-20210712152911285.png)
 
 ```shell
 # 抓取某个端口上的数据包、也可以指定其他的协议：ICMP、udp..
@@ -18,9 +18,9 @@ tcpdump -i eth0 port 22
 nc -nv 10.0.0.47 22
 ```
 
-![image-20210712155324843](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210712155324843.png)
+![image-20210712155324843](./typora-user-images/image-20210712155324843.png)
 
-![image-20210712155338986](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210712155338986.png)
+![image-20210712155338986](./typora-user-images/image-20210712155338986.png)
 
 ## **读取抓包文件**
 
@@ -32,7 +32,7 @@ tcpdump -A -r file.cap   # 使用ASCII码的形式表现
 tcpdump -X -r file.cap	 # 使用十六进制形式表现
 ```
 
-![image-20210712153605593](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210712153605593.png)
+![image-20210712153605593](./typora-user-images/image-20210712153605593.png)
 
 ## TCPdump—筛选
 
@@ -51,9 +51,9 @@ tcpdump -nX port 36000 -r http.cap
 tcpdump -A -n 'tcp[13]=24' -r http.cap
 ```
 
-![image-20210712165800270](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210712165800270.png)
+![image-20210712165800270](./typora-user-images/image-20210712165800270.png)
 
-![image-20210712170302900](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210712170302900.png)
+![image-20210712170302900](./typora-user-images/image-20210712170302900.png)
 
 # iptables
 
@@ -84,7 +84,7 @@ netfilter/iptables：IP信息包过滤系统被称为单个实体，但它实际
 + prerouting  用来修改目的地址，用来做DNAT。如：把内网中的80端口映射到路由器外网端口上
 + postrouting  用来修改源地址用来做SNAT。如：内网通过路由器NAT转换功能实现内网pc机通过一个公网IP地址上网
 
-![image-20210713105111251](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210713105111251.png)
+![image-20210713105111251](./typora-user-images/image-20210713105111251.png)
 
 `表->链->规则`
 
@@ -92,7 +92,7 @@ netfilter/iptables：IP信息包过滤系统被称为单个实体，但它实际
 
 红色代表五个链
 
-![image-20210713111527315](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210713111527315.png)
+![image-20210713111527315](./typora-user-images/image-20210713111527315.png)
 
 
 
@@ -101,7 +101,7 @@ netfilter/iptables：IP信息包过滤系统被称为单个实体，但它实际
 + 发给防火墙本身（机器本身）的数据包不经过FORWARD
 + 发给内网的数据包是经过FORWARD 的
 
-![image-20210713112508041](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210713112508041.png)
+![image-20210713112508041](./typora-user-images/image-20210713112508041.png)
 
 **表间的优先顺序**
 
@@ -136,7 +136,7 @@ ls /etc/sysconfig/iptables
 chkconfig --list iptables / systemctl status iptables
 ```
 
-![image-20210713162358356](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210713162358356.png)
+![image-20210713162358356](./typora-user-images/image-20210713162358356.png)
 
 ```shell
 # iptables命令的语法格式
@@ -149,7 +149,7 @@ iptables [-t 表名] 管理选项 [链名][条件匹配] [-j 目标动作或跳�
 
 iptables语法总结
 
-![image-20210713162833077](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210713162833077.png)
+![image-20210713162833077](./typora-user-images/image-20210713162833077.png)
 
 ```shell
 -p	协议
@@ -331,7 +331,7 @@ iptables -t nat -o eth0 条件 动作
 匹配来自192.168.0.1，去往www.abc.com 的80端口的TCP协议数据包
 ```
 
-![image-20210716153733918](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210716153733918.png)
+![image-20210716153733918](./typora-user-images/image-20210716153733918.png)
 
 ```shell
 # 注意：
@@ -488,7 +488,7 @@ web服务器端：xuegod63
 
 硬件防火墙拓扑图
 
-![image-20210716173129209](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210716173129209.png)
+![image-20210716173129209](./typora-user-images/image-20210716173129209.png)
 
 ```shell
 # 配置web服务器xuegod63防火墙：
@@ -514,15 +514,15 @@ lftp 192.168.1.63	# 可以看到连接断开了
 
 **查看配置结果`-n`的作用**
 
-![image-20210719152705421](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210719152705421.png)
+![image-20210719152705421](./typora-user-images/image-20210719152705421.png)
 
-![image-20210719152807098](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210719152807098.png)
+![image-20210719152807098](./typora-user-images/image-20210719152807098.png)
 
 > 如何知道tcp的端口是22
 
 会读取/etc/services配置文件
 
-![image-20210719153133377](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210719153133377.png)
+![image-20210719153133377](./typora-user-images/image-20210719153133377.png)
 
 #### 例2
 
@@ -534,7 +534,7 @@ lftp 192.168.1.63	# 可以看到连接断开了
 
 `扩展：ip地址命名技巧：方法一，以两个设备名称定义相领的网段。适用于做多个网段的实验`
 
-![image-20210719154333646](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210719154333646.png)
+![image-20210719154333646](./typora-user-images/image-20210719154333646.png)
 
 `方法二“从左到右，依次命名。地址1留给核心设备如下：`
 
@@ -542,7 +542,7 @@ lftp 192.168.1.63	# 可以看到连接断开了
 
 xuegod63路由器，xuegod64做客户端
 
-![image-20210719155309494](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210719155309494.png)==需求：使xuegod64可以通过xuegod63上网==
+![image-20210719155309494](./typora-user-images/image-20210719155309494.png)==需求：使xuegod64可以通过xuegod63上网==
 
 ```shell
 # 配置：xuegod63
@@ -565,7 +565,7 @@ iptables -t nat -A POSTROUTING -s 192.168.2.0/24 -j SNAT --to 192.168.1.63
 配置eth0 IP，网关，DNS：
 ```
 
-![image-20210719162304256](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210719162304256.png)
+![image-20210719162304256](./typora-user-images/image-20210719162304256.png)
 
 ```shell
 测试：ping网关是否能ping通（在63上已经将192.168.2.0网段转发到192.168.1.63上）
@@ -590,7 +590,7 @@ xuegod64：eth0：192.168.1.63
 网络拓扑图如下
 ```
 
-![image-20210719155309494](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210719155309494.png)
+![image-20210719155309494](./typora-user-images/image-20210719155309494.png)
 
 ```shell
 # 设置INPUT链为允许
@@ -615,7 +615,7 @@ iptables -A FORWARD -s 192.168.2.2 -j DROP
 
 ==注意：直接ping服务器本身，数据流是不经过FORWARD链的，所以规则要添加在INPUT链上==
 
-![image-20210713111527315](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210713111527315.png)
+![image-20210713111527315](./typora-user-images/image-20210713111527315.png)
 
 ```shell
 # 禁止192.168.2.2这台机器通过服务器上网
@@ -637,7 +637,7 @@ iptables -A OUTPUT -d 192.168.2.2 -j DROP  （直接在input链上拒绝即可�
 
 使用DNAT功能，把内网web服务器端口映射到路由器外网
 
-![image-20210719155309494](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210719155309494.png)
+![image-20210719155309494](./typora-user-images/image-20210719155309494.png)
 
 ```shell
 实验环境;
