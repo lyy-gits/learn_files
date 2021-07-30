@@ -97,7 +97,7 @@ skip-grant-tables
 
 4、==启动管理员模式下的CMD==，并将路径切换到mysql下的bin目录，然后输入``mysqld -install``（安装mysql）
 
-![image-20210311154230690](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311154230690.png)
+![image-20210311154230690](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311154230690.png)
 
 ==注意：==这里输入mysqld -install时会报msvcp120.dll失败的问题，解决方案可以参考https://www.cnblogs.com/MXL2020/p/12871203.html
 
@@ -105,7 +105,7 @@ skip-grant-tables
 
 会多出一个data目录
 
-![image-20210311155841965](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311155841965.png)
+![image-20210311155841965](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311155841965.png)
 
 6、启动mysql，查看任务管理器有mysql服务正在运行
 
@@ -113,9 +113,9 @@ skip-grant-tables
 net start mysql		#启动服务
 ```
 
-![image-20210311162403876](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311162403876.png)
+![image-20210311162403876](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311162403876.png)
 
-![image-20210311164141075](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311164141075.png)
+![image-20210311164141075](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311164141075.png)
 
 7、用命令mysql -u root -p进入mysql管理界面（密码可为空）
 
@@ -123,7 +123,7 @@ net start mysql		#启动服务
 mysql -u root -p	# 登录mysql，-p后不要带空格，直接回车，不输密码再次回车
 ```
 
-![image-20210311164454414](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311164454414.png)
+![image-20210311164454414](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311164454414.png)
 
 8、进入界面后更改root密码（分号结尾）
 
@@ -131,11 +131,11 @@ mysql -u root -p	# 登录mysql，-p后不要带空格，直接回车，不输密
 update mysql.user set authentication_string=password('123456') where user='root' and Host="localhost";
 ```
 
-![image-20210311164655443](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311164655443.png)
+![image-20210311164655443](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311164655443.png)
 
 最后输入`flush privileges;`刷新权限
 
-![image-20210311164817507](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311164817507.png)
+![image-20210311164817507](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311164817507.png)
 
 9、最后my.in文件注释最后一句skip-grant-tables
 
@@ -145,7 +145,7 @@ update mysql.user set authentication_string=password('123456') where user='root'
 net stop mysql		# 停止服务，查看任务管理器显示mysql服务已停止
 ```
 
-![image-20210311165125477](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311165125477.png)
+![image-20210311165125477](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311165125477.png)
 
 ```shell
 net start mysql		# 启动mysql服务
@@ -157,15 +157,15 @@ net start mysql		# 启动mysql服务
 mysql -u root -p123456		# 登录   -p后不加空格
 ```
 
-![image-20210311165327331](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311165327331.png)
+![image-20210311165327331](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311165327331.png)
 
 ## 安装SQLyog
 
-![image-20210311173256355](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311173256355.png)
+![image-20210311173256355](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311173256355.png)
 
 创建数据库
 
-![image-20210311173528738](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311173528738.png)
+![image-20210311173528738](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311173528738.png)
 
 ==每一个sqlyog的执行操作，本质就是对应了一个sql，可以在软件的历史记录中查看==
 
@@ -175,17 +175,17 @@ mysql -u root -p123456		# 登录   -p后不加空格
 字段： id ，name，age
 ```
 
-![image-20210311174353473](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311174353473.png)
+![image-20210311174353473](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311174353473.png)
 
 查看表：右击打开表
 
-![image-20210311174637380](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311174637380.png)
+![image-20210311174637380](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311174637380.png)
 
 插入数据
 
 直接双击表格插入数据，最后点刷新保存
 
-![image-20210311174710933](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210311174710933.png)
+![image-20210311174710933](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210311174710933.png)
 
 ## 连接数据库
 
@@ -239,7 +239,7 @@ systemctl start  mysqld
 systemctl status mysqld
 ```
 
-![image-20210312104637228](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210312104637228.png)
+![image-20210312104637228](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210312104637228.png)
 
 此时MySQL已经开始正常运行，不过要想进入MySQL还得先找出此时root用户的密码，通过如下命令可以在日志文件中找出密码：
 
@@ -247,7 +247,7 @@ systemctl status mysqld
 grep "password" /var/log/mysqld.log
 ```
 
-![image-20210312104844457](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210312104844457.png)
+![image-20210312104844457](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210312104844457.png)
 
 如下命令进入数据库：
 
@@ -269,7 +269,7 @@ mySQL完整的初始密码规则可以通过如下命令查看：
 show variables like 'validate_password%';
 ```
 
-![image-20210312105653796](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210312105653796.png)
+![image-20210312105653796](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210312105653796.png)
 
 重新设置密码规则
 
@@ -327,7 +327,7 @@ DCL	控制语言
 create database [if not exists] westos;
 ```
 
-![image-20210312113202777](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210312113202777.png)
+![image-20210312113202777](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210312113202777.png)
 
 2、删除数据库
 
@@ -514,7 +514,7 @@ character-set-server=utf8
 show create table grade\G;
 ```
 
-![image-20210317160108488](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210317160108488.png)
+![image-20210317160108488](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210317160108488.png)
 
 ## 修改删除表
 
@@ -794,19 +794,19 @@ TRUNCATE TABLE `test`	-- 自增会归零
 
 ==delete删除的效果==
 
-![image-20210319162032485](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210319162032485.png)
+![image-20210319162032485](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210319162032485.png)
 
-![image-20210319161834517](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210319161834517.png)
+![image-20210319161834517](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210319161834517.png)
 
 重新插入数据自增从4开始
 
-![image-20210319161911983](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210319161911983.png)
+![image-20210319161911983](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210319161911983.png)
 
 ==truncate删除效果==
 
-![image-20210319162003903](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210319162003903.png)
+![image-20210319162003903](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210319162003903.png)
 
-![image-20210319162024975](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210319162024975.png)
+![image-20210319162024975](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210319162024975.png)
 
 
 
@@ -992,9 +992,9 @@ WHERE borndate IS NULL
 
 > join 对比
 
-![image-20210322162617034](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210322162617034.png)
+![image-20210322162617034](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210322162617034.png)
 
-![image-20210322162801582](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210322162801582.png)
+![image-20210322162801582](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210322162801582.png)
 
 ```sql
 -- ===============  连表查询 join ================
@@ -1107,7 +1107,7 @@ ON r.subjectno=sub.subjectno
 
 自己的表和自己的表连接，核心：==一张表拆为两张一样的表即可==
 
-![image-20210323110356611](C:\Users\v_lyyoli\AppData\Roaming\Typora\typora-user-images\image-20210323110356611.png)
+![image-20210323110356611](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210323110356611.png)
 
 父类
 
