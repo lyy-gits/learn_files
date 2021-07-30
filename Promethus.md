@@ -58,7 +58,7 @@
 
   基于php，mysql，snmp及rrdtool开发的==网络流量监测图形分析工具==。用php语言实现的一个软件，它的主要功能是用snmp服务获取数据，然后用rrdtool储存和更新数据。官网地址：https://www.cacti.net
 
-  ![image-20210726194425898](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726194425898.png)
+  ![image-20210726194425898](./typora-user-images/image-20210726194425898.png)
 
   > 优点
 
@@ -77,7 +77,7 @@
   能够跨平台，插件多，报警功能强大。官网地址：https://www.nagios.org
   它是一款免费的开源IT基础设施监控系统
 
-  ![image-20210726193556807](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726193556807.png)
+  ![image-20210726193556807](./typora-user-images/image-20210726193556807.png)
 
   > 优点
 
@@ -93,7 +93,7 @@
 + **ganglia** 
   设计用于测量数以千计的节点的基础性能和流量使用情况，资源消耗非常小。官网地址：http://ganglia.info
 
-  ![image-20210726194650194](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726194650194.png)
+  ![image-20210726194650194](./typora-user-images/image-20210726194650194.png)
 
   > 优点
 
@@ -110,7 +110,7 @@
 + **OpenFalcon** 
   小米发布的运维监控软件，高效率，高可用。时间较短，用户基数小。是一款企业级、高可用、高扩展的开源监控解决方案。官网地址：http://open-falcon.org     c/s架构
 
-  ![image-20210726195314316](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726195314316.png)
+  ![image-20210726195314316](./typora-user-images/image-20210726195314316.png)
 
   > 优点
 
@@ -119,7 +119,7 @@
 + **==zabbix==** 
   是一个企业级的分布式开源监控方案。跨平台，画图，多条件告警，多种API接口。使用基数特别大。官网地址：https://www.zabbix.com    c/s架构
 
-  ![image-20210726195946147](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726195946147.png)
+  ![image-20210726195946147](./typora-user-images/image-20210726195946147.png)
 
 + **==prometheus==** 
   新一代的云原生监控系统。基于时间序列的数值数据的容器监控解决方案。官网地址：https://prometheus.io
@@ -135,7 +135,7 @@
 
 > 最初人们直接使用物理机，将进程直接跑在物理机上面
 
-![image-20210727104655252](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727104655252.png)
+![image-20210727104655252](./typora-user-images/image-20210727104655252.png)
 
 + **优点**：安装完系统就能直接用，最简单的使用方法
 + **缺点**：进程间无法隔离，会互相应影响
@@ -144,7 +144,7 @@
 
 > 后来人们开始使用虚拟机
 
-![image-20210727105113251](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727105113251.png)
+![image-20210727105113251](./typora-user-images/image-20210727105113251.png)
 
 + **优点**：及其资源得到了更高效的利用，也实现了进程隔离
 + **缺点**：虚拟机本身有操作系统的消耗，一台物理机，生产环境中最小也要给虚拟机分配1核2G的资源
@@ -153,7 +153,7 @@
 
 > docker的出现
 
-![image-20210727105614728](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727105614728.png)
+![image-20210727105614728](./typora-user-images/image-20210727105614728.png)
 
 + 优点：更轻量，在成本在资源消耗上更具有优势，一台物理机可以跑上百个docker
 
@@ -242,15 +242,15 @@ Prometheus有着非常高效的时间序列数据存储方法，每个采样数�
 
 ## 普罗米修斯原理架构图
 
-![image-20210726141702163](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726141702163.png)
+![image-20210726141702163](./typora-user-images/image-20210726141702163.png)
 
-![image-20210727114407870](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727114407870.png)
+![image-20210727114407870](./typora-user-images/image-20210727114407870.png)
 
 >  工作过程
 
 + 数据来源是一些官方的exporter或自定义sdk或接口
 
-![image-20210727113239661](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727113239661.png)
+![image-20210727113239661](./typora-user-images/image-20210727113239661.png)
 
 + Server通过http的pull方式采集监控数据，并在本地存储到tsdb中
 
@@ -375,9 +375,9 @@ ps -ef | grep pushgateway
 端口9091
 ```
 
-![image-20210727171554278](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727171554278.png)
+![image-20210727171554278](./typora-user-images/image-20210727171554278.png)
 
-![image-20210727171607454](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727171607454.png)
+![image-20210727171607454](./typora-user-images/image-20210727171607454.png)
 
 测试访问：[Prometheus Pushgateway](http://119.91.75.93:9091/#)
 
@@ -385,7 +385,7 @@ ps -ef | grep pushgateway
 
 + 分组，太多的报警信息来到时，可以分组发送
 + 抑制，如果一个报警规则触发以后，后面相同的触发就会被抑制
-  ![image-20210727164504707](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727164504707.png)
+  ![image-20210727164504707](./typora-user-images/image-20210727164504707.png)
 + 静音，直接将个别报警进行屏蔽
 + 高可用，可以组成Alertmanager集群
 
@@ -399,7 +399,7 @@ ps -ef | grep alert
 端口为9093
 ```
 
-![image-20210727165324367](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727165324367.png)
+![image-20210727165324367](./typora-user-images/image-20210727165324367.png)
 
 测试访问：[Alertmanager](http://119.91.75.93:9093/#/alerts)
 
@@ -415,7 +415,7 @@ ps -ef | grep node
 端口为9100
 ```
 
-![image-20210727170705535](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727170705535.png)
+![image-20210727170705535](./typora-user-images/image-20210727170705535.png)
 
 测试访问：[119.91.75.93:9100/metrics](http://119.91.75.93:9100/metrics)
 
@@ -427,7 +427,7 @@ ps -ef | grep node
 
 # 四、Prometheus数据类型
 
-![image-20210727172600336](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727172600336.png)
+![image-20210727172600336](./typora-user-images/image-20210727172600336.png)
 
 ## 数据模型
 
@@ -435,7 +435,7 @@ ps -ef | grep node
 + 一般由字母和下划线构成,prometheus_http_requests_total(应用名称_ 检测对象 _ 数值类型_单位)
 + 标签就是对一条时间序列不同维度的识别
 
-![image-20210727183155389](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727183155389.png)
+![image-20210727183155389](./typora-user-images/image-20210727183155389.png)
 
 ## 数据类型
 
@@ -458,7 +458,7 @@ ps -ef | grep node
 ### Histogram（直方图类型）客户端计算
 
 同一个名称后有三个后缀
-![image-20210727190928656](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727190928656.png)
+![image-20210727190928656](./typora-user-images/image-20210727190928656.png)
 
 ```shell
 # Histogram由< basename>_bucket,< basename>_sum，_count组成
@@ -469,7 +469,7 @@ ps -ef | grep node
 ```
 
 例如：使用Histogram可以更直观的看出学生成绩分布情况
-![image-20210727191355635](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727191355635.png)
+![image-20210727191355635](./typora-user-images/image-20210727191355635.png)
 **可以计算分位数**
 
 ```shell
@@ -477,7 +477,7 @@ histogram_quantile()函数可以将histgram指标的分位数统计出来
 histogram_quantile(0.99,sum(irate(grpc_server_handling_seconds_bucket[1m])) by (grpc_method,le))
 ```
 
-![image-20210727193101555](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210727193101555.png)
+![image-20210727193101555](./typora-user-images/image-20210727193101555.png)
 
 ### Summary（摘要类型）
 
@@ -500,43 +500,43 @@ PromQL (Prometheus Query Language)是 Prometheus自己开发的数据查询DSL�
 
 结构如下：
 
-![image-20210728144428430](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728144428430.png)
+![image-20210728144428430](./typora-user-images/image-20210728144428430.png)
 
 > 最基本的查询
 
 直接输入目标名字：最近一个时间间隔（采集周期）下的值
 
-![image-20210728144819545](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728144819545.png)
+![image-20210728144819545](./typora-user-images/image-20210728144819545.png)
 
 > 查询结果
 
 + 瞬时数据(Instant vector):包含一组时序，每个时序只有一个点,例如︰ prometheus_http _ requests_ total
 
 + 区间数据(Range vector):包含一组时序，每个时序有多个点，例如: prometheus_http _ requests_ total [5m]
-  ![image-20210728145146742](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728145146742.png)
+  ![image-20210728145146742](./typora-user-images/image-20210728145146742.png)
 
 + 纯量数据(Scalar):纯量只有一个数字，没有时序，例如︰count(prometheus_http _requests _total)
 
-  ![image-20210728145215318](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728145215318.png)
+  ![image-20210728145215318](./typora-user-images/image-20210728145215318.png)
 
   > 可以指定label的name查询
 
 + prometheus_http _requests _total{code="200"}
-  ![image-20210728145904807](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728145904807.png)
+  ![image-20210728145904807](./typora-user-images/image-20210728145904807.png)
 + And 逻辑直接，分割：prometheus_http _requests _total{code="200",job="peometheus"}
 + 还支持正则匹配：用=~、!~表示正则：prometheus_http _requests _total{code =~ "2.* |3. *",handler !~ "/alert. *",job="prometheus"}
 + 后面可以加时间范围：通过[time]来实现
   prometheus_http _requests _total{code=~ "2.* |3. *",handler !~ "/alert. *",job="prometheus"}[5m]
-  ![image-20210728150134384](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728150134384.png)
+  ![image-20210728150134384](./typora-user-images/image-20210728150134384.png)
 
 > 还支持算术运算
 
 + 加减乘除等︰+，-，*，/，%，^
   计算内存使用率
-  ![image-20210728150737062](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728150737062.png)
+  ![image-20210728150737062](./typora-user-images/image-20210728150737062.png)
 
 + 比较运算∶==，!=，>，<，>=，<=
-  ![image-20210728151326047](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728151326047.png)
+  ![image-20210728151326047](./typora-user-images/image-20210728151326047.png)
 
 + 逻辑运算：and，or
 
@@ -561,9 +561,9 @@ PromQL (Prometheus Query Language)是 Prometheus自己开发的数据查询DSL�
   ```
 
   直接在grafana查看promql查询语句
-  ![image-20210728152935341](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728152935341.png)
+  ![image-20210728152935341](./typora-user-images/image-20210728152935341.png)
   将prometheus数据导入grafana  [Grafana Dashboards - discover and share dashboards for Grafana. | Grafana Labs](https://grafana.com/grafana/dashboards?dataSource=prometheus)
-  ![image-20210728153101350](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728153101350.png)
+  ![image-20210728153101350](./typora-user-images/image-20210728153101350.png)
 
 # Rule&&label
 
@@ -571,7 +571,7 @@ PromQL (Prometheus Query Language)是 Prometheus自己开发的数据查询DSL�
 
 
 
-![image-20210726142452496](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726142452496.png)
+![image-20210726142452496](./typora-user-images/image-20210726142452496.png)
 
 1. prometheus服务器
 2. 被监控服务器
@@ -597,7 +597,7 @@ PromQL (Prometheus Query Language)是 Prometheus自己开发的数据查询DSL�
 [root@VM-0-47-centos ~]# mv /usr/local/prometheus-2.28.1.linux-amd64/ /usr/local/prometheus
 ```
 
-![image-20210726164119634](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726164119634.png)
+![image-20210726164119634](./typora-user-images/image-20210726164119634.png)
 
 第三步：启动普罗米修斯软件
 
@@ -606,7 +606,7 @@ cd /usr/local/prometheus
 ./prometheus --config.file="/usr/local/prometheus/prometheus.yml" &  # &后台运行，不占用终端
 ```
 
-![image-20210726165229870](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726165229870.png)
+![image-20210726165229870](./typora-user-images/image-20210726165229870.png)
 
 第四步：测试端口占用情况，判断是否真正启动
 
@@ -616,27 +616,27 @@ lsof -i:9090
 ss -ntalp | grep 9090
 ```
 
-![image-20210726185630076](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726185630076.png)
+![image-20210726185630076](./typora-user-images/image-20210726185630076.png)
 
 ## 3、prometheus软件界面（Web）
 
 通过浏览器访问http://服务器IP:9090就可以访问到prometheus的主界面
 
-![image-20210726190031309](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726190031309.png)
+![image-20210726190031309](./typora-user-images/image-20210726190031309.png)
 
 默认只监控了本机一台
 
-![image-20210726190502036](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726190502036.png)
+![image-20210726190502036](./typora-user-images/image-20210726190502036.png)
 
 由上图可知，系统默认监控了自己的主机信息，监控的接口：http:/119.91.75.93:9090/metrics
 
-![image-20210726190327763](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210726190327763.png)
+![image-20210726190327763](./typora-user-images/image-20210726190327763.png)
 
 ## 4、prometheus默认监控图像
 
 在web界面可以通过关键字查询监控
 
-![image-20210728155143118](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728155143118.png)
+![image-20210728155143118](./typora-user-images/image-20210728155143118.png)
 
 # 六、使用prometheus监控Linux主机
 
@@ -665,7 +665,7 @@ ss -ntulp | grep 9100
 # 使用http协议+9100端口收集Linux主机信息，通过访问http://被监控端:9100/metrics就可以查看到node_exporter在被监控端收集的监控信息
 ```
 
-![image-20210728161821491](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728161821491.png)
+![image-20210728161821491](./typora-user-images/image-20210728161821491.png)
 
 ## 2、prometheus拉取node节点信息
 
@@ -681,7 +681,7 @@ ss -ntulp | grep 9100
 
 在文件的最后添加内容
 
-![image-20210728163617628](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728163617628.png)
+![image-20210728163617628](./typora-user-images/image-20210728163617628.png)
 
 ```shell
 # 改完配置文件后，重启服务
@@ -693,7 +693,7 @@ ss -natlp | grep 9090
 
 测试：回到web管理界面——status——Targets——就可以看到多了一个监控目标agent1
 
-![image-20210728164146731](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728164146731.png)
+![image-20210728164146731](./typora-user-images/image-20210728164146731.png)
 
 # 七、使用prometheus监控mysqld服务
 
@@ -768,7 +768,7 @@ pkill prometheus
 
 测试访问，多了一个mariadb
 
-![image-20210728171650608](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728171650608.png)
+![image-20210728171650608](./typora-user-images/image-20210728171650608.png)
 
 # 八、Grafana可视化图形工具
 
@@ -801,51 +801,51 @@ Grafana是一个开源的度量分析和可视化工具，可以通过将采集�
 
 默认用户名密码都是：admin，首次登陆后，需要对admin的密码进行更改
 
-![image-20210728184733085](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728184733085.png)
+![image-20210728184733085](./typora-user-images/image-20210728184733085.png)
 
 ## 4、添加prometheus的数据源
 
 第一步：添加数据源
 
-![image-20210728184944340](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728184944340.png)
+![image-20210728184944340](./typora-user-images/image-20210728184944340.png)
 
 第二步：设置数据源、数据源名称、类型、IP地址、端口号
 
-![image-20210728185447376](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728185447376.png)
+![image-20210728185447376](./typora-user-images/image-20210728185447376.png)
 
-![image-20210728185848987](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728185848987.png)
+![image-20210728185848987](./typora-user-images/image-20210728185848987.png)
 
-![image-20210728185949834](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728185949834.png)
+![image-20210728185949834](./typora-user-images/image-20210728185949834.png)
 
 第三步：点击齿轮图标，查看已添加的数据源
 
-![image-20210728190404426](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728190404426.png)
+![image-20210728190404426](./typora-user-images/image-20210728190404426.png)
 
 ## 5、为添加好的数据源做图形显示
 
 第一步：点击加号，选择Dashboard
 
-![image-20210728190644093](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728190644093.png)
+![image-20210728190644093](./typora-user-images/image-20210728190644093.png)
 
 第二步：增加一个图形
 
 第三步：选择需要呈现图形的数据（Edit编辑）
 
-![image-20210728190840212](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728190840212.png)
+![image-20210728190840212](./typora-user-images/image-20210728190840212.png)
 
 第四步：选择Data Source数据源，选择prometheus
 
-![image-20210728194233793](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728194233793.png)
+![image-20210728194233793](./typora-user-images/image-20210728194233793.png)
 
 第五步：可以把我们设计好的图形图像保存起来，以备下次使用
 
-![image-20210728194438241](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728194438241.png)
+![image-20210728194438241](./typora-user-images/image-20210728194438241.png)
 
-![image-20210728194531248](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728194531248.png)
+![image-20210728194531248](./typora-user-images/image-20210728194531248.png)
 
 扩展：根据条件筛选我们想要的数据
 
-![image-20210728195137369](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210728195137369.png)
+![image-20210728195137369](./typora-user-images/image-20210728195137369.png)
 
 # 九、Grafana图形显示MySQL监控数据
 
@@ -874,11 +874,11 @@ systemctl restart grafana-server
 
 ## 2、在Grafana中导入json文件
 
-![image-20210729112614179](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729112614179.png)
+![image-20210729112614179](./typora-user-images/image-20210729112614179.png)
 
 选择上传MySQL_Overview,设置完成后，点击import
 
-![image-20210729114744734](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729114744734.png)
+![image-20210729114744734](./typora-user-images/image-20210729114744734.png)
 
 ## 3、设置数据源
 
@@ -888,48 +888,48 @@ systemctl restart grafana-server
 
 然后再回去刷新，就有数据了
 
-![image-20210729114223846](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729114223846.png)
+![image-20210729114223846](./typora-user-images/image-20210729114223846.png)
 
-![image-20210729114818692](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729114818692.png)
+![image-20210729114818692](./typora-user-images/image-20210729114818692.png)
 
 # 十、Grafana+onealert报警
 
 ## 1、onealert
 
 [睿象云-智能告警平台 (aiops.com)](https://caweb.aiops.com/#/integrate)
-![image-20210729155944788](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729155944788.png)
+![image-20210729155944788](./typora-user-images/image-20210729155944788.png)
 
 ## 2、在Grafana中配置Webhook URL
 
 第一步：在Grafana中创建Notification channel，选择类型为Webhook；
 
-![image-20210729160236494](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729160236494.png)
+![image-20210729160236494](./typora-user-images/image-20210729160236494.png)
 
 第二步：设置webhook信息
 
-![image-20210729160720831](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729160720831.png)
+![image-20210729160720831](./typora-user-images/image-20210729160720831.png)
 
 第三步：
 
-![image-20210729160756305](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729160756305.png)
+![image-20210729160756305](./typora-user-images/image-20210729160756305.png)
 
 第三步：将配置的Webhook Notification Channel添加到Grafana Alert中
 
-![image-20210729161009486](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729161009486.png)
+![image-20210729161009486](./typora-user-images/image-20210729161009486.png)
 
-![image-20210729161459227](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729161459227.png)
+![image-20210729161459227](./typora-user-images/image-20210729161459227.png)
 
 设置告警内容：需要发送给运维负责人
 
-![image-20210729161720801](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729161720801.png)
+![image-20210729161720801](./typora-user-images/image-20210729161720801.png)
 
 设置完成后，保存
 
 测试告警情况
 
-![image-20210729162707791](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729162707791.png)
+![image-20210729162707791](./typora-user-images/image-20210729162707791.png)
 
 可以看到邮件收到了告警信息
 
-![image-20210729162846852](C:\Users\v_lyyoli\Desktop\learn_files\typora-user-images\image-20210729162846852.png)
+![image-20210729162846852](./typora-user-images/image-20210729162846852.png)
 
